@@ -7,3 +7,7 @@
 
 ![brain-even test](https://asciinema.org/a/AYUGtttUcNnvqc3fATh2xqtp3)
 
+![brain-calc](https://asciinema.org/connect/601f206e-7826-4fa6-919a-5f1bd7426235)
+
+
+
