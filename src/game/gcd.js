@@ -10,7 +10,7 @@ const gcd = () => {
         let x = Math.floor(Math.random() * 30);
         let y = Math.floor(Math.random() * 30);
 
-        const test = () => {
+        const gcdGen = () => {
             if (y > x) {let temp = x; x = y; y = temp;}
             while (true) {
                 if (y == 0) return x;
@@ -19,8 +19,8 @@ const gcd = () => {
                 y %= x;
             }
         };
-        let result = test();
-        let question = readlineSync.question(`Find the greatest common divisor of given numbers. \nQuestion: ${x} ${y}\n`, );
+        let result = gcdGen();
+        let question = readlineSync.question(`Find the greatest common divisor of given numbers. \nQuestion: ${x} ${y}\n Your answer: `, );
         let userGoodbye = `'${question}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, ${userName}!`;
 
         if (result == question) {

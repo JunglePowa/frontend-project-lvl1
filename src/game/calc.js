@@ -28,7 +28,7 @@ const calc = () => {
                  break;
         }
 
-        let userGoodbye = `${question} is wrong answer ;(. Correct answer was ${result}. \nLet's try again, ${userName}!`;
+        let userGoodbye = `'${question}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, ${userName}!`;
 
         if (result == question) {
             console.log('Correct!');
