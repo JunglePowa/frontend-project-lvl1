@@ -5,9 +5,11 @@
 
 ![linter githubactions](https://github.com/JunglePowa/frontend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)
 
-![brain-even test](https://asciinema.org/a/AYUGtttUcNnvqc3fATh2xqtp3)
+![brain-even](https://asciinema.org/connect/601f206e-7826-4fa6-919a-5f1bd7426235)
 
 ![brain-calc](https://asciinema.org/connect/601f206e-7826-4fa6-919a-5f1bd7426235)
+
+![brain-gcd](https://asciinema.org/connect/601f206e-7826-4fa6-919a-5f1bd7426235)
 
 
 
