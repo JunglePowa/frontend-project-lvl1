@@ -15,7 +15,7 @@ const calc = () => {
         let operatorsArr = ['-', '+', '*'];
         let operator = operatorsArr[Math.floor(Math.random() * 3)];
         let expression = `${aNum} ${operator} ${bNum}`;
-        let question = readlineSync.question(`What is the result of the expression? \nQuestion: ${expression}\n`, );
+        let question = readlineSync.question(`What is the result of the expression? \nQuestion: ${expression}\nYour answer: `, );
         switch (operator) {
             case '-':
                 result = aNum - bNum;

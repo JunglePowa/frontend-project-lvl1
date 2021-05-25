@@ -13,5 +13,7 @@
 
 ![brain-progression](https://asciinema.org/connect/601f206e-7826-4fa6-919a-5f1bd7426235)
 
+![brain-prime](https://asciinema.org/connect/601f206e-7826-4fa6-919a-5f1bd7426235)
+
 
 
