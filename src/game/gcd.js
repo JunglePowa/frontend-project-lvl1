@@ -20,7 +20,7 @@ const gcd = () => {
             }
         };
         let result = gcdGen();
-        let question = readlineSync.question(`Find the greatest common divisor of given numbers. \nQuestion: ${x} ${y}\n Your answer: `, );
+        let question = readlineSync.question(`Find the greatest common divisor of given numbers. \nQuestion: ${x} ${y}\nYour answer: `, );
         let userGoodbye = `'${question}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, ${userName}!`;
 
         if (result == question) {
@@ -32,7 +32,7 @@ const gcd = () => {
             }
     };
     if (gameStatus == 3) {
-        console.log(`Congratulations, ${userName}`);
+        console.log(`Congratulations, ${userName}!`);
     };
 };
 
