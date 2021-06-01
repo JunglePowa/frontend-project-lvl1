@@ -8,12 +8,12 @@ let gameStatus = 0;
 const calc = () => {
   for (let i = 1; i <= 3; i++) {
     let result;
-    const aNum = Math.floor(Math.random() * 100);
-    const bNum = Math.floor(Math.random() * 100);
-    const operatorsArr = ['-', '+', '*'];
-    const operator = operatorsArr[Math.floor(Math.random() * 3)];
+    let aNum = Math.floor(Math.random() * 100);
+    let bNum = Math.floor(Math.random() * 100);
+    let operatorsArr = ['-', '+', '*'];
+    let operator = operatorsArr[Math.floor(Math.random() * 3)];
     let expression = `${aNum} ${operator} ${bNum}`;
-    const question = readlineSync.question(`What is the result of the expression? \nQuestion: ${expression}\nYour answer: `, );
+    let question = readlineSync.question(`What is the result of the expression? \nQuestion: ${expression}\nYour answer: `, );
     switch (operator) {
       case '-':
         result = aNum - bNum;
@@ -27,7 +27,7 @@ const calc = () => {
     }
   let userGoodbye = `'${question}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, ${userName}!`;
 
-  if (result === question) {
+  if (result == question) {
     console.log('Correct!');
     gameStatus++;
     } else { 
