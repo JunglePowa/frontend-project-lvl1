@@ -1,47 +1,44 @@
 import readlineSync from 'readline-sync';
 import { greeting, userName } from '../cli.js';
 
-
 greeting();
 
 let gameStatus = 0;
 
 const calc = () => {
+  for (let i = 1; i <= 3; i++) {
+    let result;
+    const aNum = Math.floor(Math.random() * 100);
+    const bNum = Math.floor(Math.random() * 100);
+    const operatorsArr = ['-', '+', '*'];
+    const operator = operatorsArr[Math.floor(Math.random() * 3)];
+    let expression = `${aNum} ${operator} ${bNum}`;
+    const question = readlineSync.question(`What is the result of the expression? \nQuestion: ${expression}\nYour answer: `, );
+    switch (operator) {
+      case '-':
+        result = aNum - bNum;
+        break;
+      case '+':
+        result = aNum + bNum;
+        break;
+      case '*':
+        result = aNum * bNum;
+        break;
+    }
+  let userGoodbye = `'${question}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, ${userName}!`;
 
-    for (let i = 1; i <= 3; i++) {
-        let result;
-        let aNum = Math.floor(Math.random() * 100);
-        let bNum = Math.floor(Math.random() * 100);
-        let operatorsArr = ['-', '+', '*'];
-        let operator = operatorsArr[Math.floor(Math.random() * 3)];
-        let expression = `${aNum} ${operator} ${bNum}`;
-        let question = readlineSync.question(`What is the result of the expression? \nQuestion: ${expression}\nYour answer: `, );
-        switch (operator) {
-            case '-':
-                result = aNum - bNum;
-                break;
-            case '+':
-                result = aNum + bNum;
-                break;
-            case '*':
-                result = aNum * bNum;
-                 break;
+  if (result === question) {
+    console.log('Correct!');
+    gameStatus++;
+    } else { 
+        console.log(userGoodbye);
+        break;
         }
-
-        let userGoodbye = `'${question}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, ${userName}!`;
-
-        if (result == question) {
-            console.log('Correct!');
-            gameStatus++;
-            } else { 
-                console.log(userGoodbye);
-                break;
-            }
         
     }
-    if (gameStatus == 3) {
-        console.log(`Congratulations, ${userName}!`);
-    };
+  if (gameStatus === 3) {
+  console.log(`Congratulations, ${userName}!`);
+ }
 };
 
-export default calc;
+export default calc
