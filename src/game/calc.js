@@ -6,14 +6,14 @@ greeting();
 let gameStatus = 0;
 
 const calc = () => {
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 3; i += 1) {
     let result;
     let aNum = Math.floor(Math.random() * 100);
     let bNum = Math.floor(Math.random() * 100);
     let operatorsArr = ['-', '+', '*'];
     let operator = operatorsArr[Math.floor(Math.random() * 3)];
     let expression = `${aNum} ${operator} ${bNum}`;
-    let question = readlineSync.question(`What is the result of the expression? \nQuestion: ${expression}\nYour answer: `, );
+    let question = readlineSync.question(`What is the result of the expression?\nQuestion: ${expression}\nYour answer: `);
     switch (operator) {
       case '-':
         result = aNum - bNum;
@@ -24,21 +24,20 @@ const calc = () => {
       case '*':
         result = aNum * bNum;
         break;
+      default:
+        break;
     }
-  let userGoodbye = `'${question}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, ${userName}!`;
+    let userGoodbye = `'${question}' is wrong answer ;(. Correct answer was '${result}'. \nLet's try again, ${userName}!`;
 
   if (result == question) {
     console.log('Correct!');
     gameStatus++;
-    } else { 
-        console.log(userGoodbye);
-        break;
-        }
-        
+    } else { console.log(userGoodbye);
+        break; }
     }
   if (gameStatus === 3) {
-  console.log(`Congratulations, ${userName}!`);
+    console.log(`Congratulations, ${userName}!`);
  }
 };
 
-export default calc
+export default calc;
