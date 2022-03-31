@@ -13,4 +13,5 @@ rules: {
       jsx: 'never',
     }],
   "no-console": "off",
+  'eslint.autoFixOnSave': true,
 }
