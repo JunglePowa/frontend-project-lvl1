@@ -5,7 +5,7 @@ const calc = () => {
   const numbA = Math.floor(Math.random() * 101);
   const numbB = Math.floor(Math.random() * 101);
   let result = '';
-  console.log(`Question ${numbA} ${char} ${numbB}`);
+  console.log(`Question: ${numbA} ${char} ${numbB}`);
   switch (char) {
     case '-':
       result = numbA - numbB;
