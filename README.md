@@ -19,7 +19,7 @@
 'brain - progression' - игра нахождение шага прогессии масива 
 ![brain-progression](https://asciinema.org/a/FfdqtbojEe2aEO7uWEutAJPjs)
 
-![example workflow](https://github.com/JunglePowa/frontend-project-lvl1/actions/workflows/hexlet-check.yml /badge.svg)
+![example workflow](https://github.com/JunglePowa/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg)
 
 
 
