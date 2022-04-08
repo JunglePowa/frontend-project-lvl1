@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import progression from '../src/games/progression.js';
+import { getRule, getQuestionAndCalc } from '../src/games/progression.js';
 import game from '../src/index.js';
 
-game(progression);
+// start game find number in progression
+game(getRule, getQuestionAndCalc);

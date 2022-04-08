@@ -1,12 +1,9 @@
-const calc = () => {
-  console.log('What is the result of the expression?');
-  const arrChar = ['+', '-', '*'];
-  const char = arrChar[Math.floor(Math.random() * 3)];
-  const numbA = Math.floor(Math.random() * 101);
-  const numbB = Math.floor(Math.random() * 101);
+import { randomNumbs } from '../utils.js';
+
+// calc result
+const calc = (char, numbA, numbB, chars) => {
   let result = '';
-  console.log(`Question: ${numbA} ${char} ${numbB}`);
-  switch (char) {
+  switch (chars[char]) {
     case '-':
       result = numbA - numbB;
       break;
@@ -21,4 +18,17 @@ const calc = () => {
   }
   return result;
 };
-export default calc;
+// print rule
+const getRule = () => {
+  console.log('What is the result of the expression?');
+};
+// generate question and get result
+const getQuestionAndCalc = () => {
+  const char = randomNumbs(3);
+  const numbA = randomNumbs(101);
+  const numbB = randomNumbs(101);
+  const chars = ['+', '-', '*'];
+  console.log(`Question: ${numbA} ${chars[char]} ${numbB}`);
+  return calc(char, numbA, numbB, chars);
+};
+export { getRule, getQuestionAndCalc };

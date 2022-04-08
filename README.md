@@ -6,22 +6,38 @@
 ___________________________
 ### Игры серии Brain-Games
 
-#### Игра Brain-calc
+Для установки сколируйте репозиторий >> sudo npm install -g frontend-lvl1
+__________________________
+
+#### Игра: "Калькулятор"
+
 для запуска игры наберите brain-calc
 
 [![brain-calc](https://asciinema.org/a/HDSBR3afIWlGtKdE0lFPMfsK7.svg)](https://asciinema.org/a/HDSBR3afIWlGtKdE0lFPMfsK7)
 
-'brain-even' - игра на проверка на четность
-![brain-even](https://asciinema.org/a/MQwEhk9eA4qycATOLMhKpAQqa)
+#### Игра: "Проверка на чётность"
 
-'brain-gcd' - игра нахождения наибольшего общего делителя
-![brain-gcd](https://asciinema.org/a/QBqEHNax3pAezFtlJsiwiMZFY)
+для запуска игры наберите brain-even
 
-'brain-prime' - игра проверка числа на простое
-![brain-prime](https://asciinema.org/a/VwnigZM8zFZscdIjXpNXvdkns)
+[![brain-even](https://asciinema.org/a/MQwEhk9eA4qycATOLMhKpAQqa.svg)](https://asciinema.org/a/MQwEhk9eA4qycATOLMhKpAQqa)
 
-'brain - progression' - игра нахождение шага прогессии масива 
-![brain-progression](https://asciinema.org/a/FfdqtbojEe2aEO7uWEutAJPjs)
+#### Игра: "НОД"
+
+для запуска игры наберите brain-gcd
+
+[![brain-gcd](https://asciinema.org/a/QBqEHNax3pAezFtlJsiwiMZFY.svg)](https://asciinema.org/a/QBqEHNax3pAezFtlJsiwiMZFY)
+
+#### Игра "Простое ли число?"
+
+для запуска игры наберите brain-prime
+
+[![brain-prime](https://asciinema.org/a/VwnigZM8zFZscdIjXpNXvdkns.svg)](https://asciinema.org/a/VwnigZM8zFZscdIjXpNXvdkns)
+
+#### Игра "Арифметическая прогрессия"
+
+для запуска игры наберите brain-progression
+
+[![brain-progression](https://asciinema.org/a/FfdqtbojEe2aEO7uWEutAJPjs.svg)](https://asciinema.org/a/FfdqtbojEe2aEO7uWEutAJPjs)
 
 
 
