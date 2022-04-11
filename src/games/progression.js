@@ -1,31 +1,28 @@
-import { randomNumbs, randomRange } from '../utils.js';
+import randomNumbs from '../utils.js';
 
-// get hiden array
-const hidePos = (arr, hideCharPos) => {
-  const array = arr;
-  array[hideCharPos] = '..';
-  return array;
+// rule
+const rule = () => {
+  const str = 'What number is missing in the progression?';
+  return str;
 };
 
-// get rule
-const getRule = () => {
-  console.log('What number is missing in the progression?');
-};
-
-// generate question and get result
-const getQuestionAndCalc = () => {
+// generate question and result
+const questionAndCalc = () => {
   const arr = [];
-  const progressionStep = randomRange(10, 2);
-  let num = randomRange(30, 5);
-  const hideCharPos = randomNumbs(10);
-  for (let i = 0; i < 10; i += 1) {
+  const progressionStep = randomNumbs(1, 10);
+  let num = randomNumbs(5, 30);
+  const hideCharPos = randomNumbs(1, 10);
+  const progressionLength = 10;
+  for (let i = 0; i < progressionLength; i += 1) {
     arr[i] = num;
     num += progressionStep;
   }
   const result = arr[hideCharPos];
-  const hidenArray = hidePos(arr, hideCharPos);
-  console.log(`Question: ${hidenArray.join(' ')}`);
-  return result;
+  // hide pos in arr
+  arr[hideCharPos] = '..';
+  const questionString = `${arr.join(' ')}`;
+  const resultString = `${questionString} result${result}`;
+  return String(resultString);
 };
 
-export { getRule, getQuestionAndCalc };
+export { rule, questionAndCalc };

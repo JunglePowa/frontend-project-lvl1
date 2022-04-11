@@ -1,34 +1,32 @@
-import { randomNumbs } from '../utils.js';
+import randomNumbs from '../utils.js';
 
-// calc result
-const calc = (char, numbA, numbB, chars) => {
+// print rule
+const rule = () => {
+  const str = 'What is the result of the expression?';
+  return str;
+};
+// generate question and calc result
+const questionAndCalc = () => {
+  const arr = ['+', '-', '*'];
+  const index = randomNumbs(0, arr.length);
+  const num1 = randomNumbs(1, 100);
+  const num2 = randomNumbs(1, 100);
+  const questionString = `${num1} ${arr[index]} ${num2}`;
   let result = '';
-  switch (chars[char]) {
+  switch (arr[index]) {
     case '-':
-      result = numbA - numbB;
+      result = num1 - num2;
       break;
     case '+':
-      result = numbA + numbB;
+      result = num1 + num2;
       break;
     case '*':
-      result = numbA * numbB;
+      result = num1 * num2;
       break;
     default:
       break;
   }
-  return result;
+  const resultString = `${questionString} result${result}`;
+  return String(resultString);
 };
-// print rule
-const getRule = () => {
-  console.log('What is the result of the expression?');
-};
-// generate question and get result
-const getQuestionAndCalc = () => {
-  const char = randomNumbs(3);
-  const numbA = randomNumbs(101);
-  const numbB = randomNumbs(101);
-  const chars = ['+', '-', '*'];
-  console.log(`Question: ${numbA} ${chars[char]} ${numbB}`);
-  return calc(char, numbA, numbB, chars);
-};
-export { getRule, getQuestionAndCalc };
+export { rule, questionAndCalc };

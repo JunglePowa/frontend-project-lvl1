@@ -1,4 +1,10 @@
-import { randomNumbs } from '../utils.js';
+import randomNumbs from '../utils.js';
+
+// rule
+const rule = () => {
+  const str = 'Find the greatest common divisor of given numbers.';
+  return str;
+};
 
 // calc gcd
 const gcd = (x, y) => {
@@ -9,17 +15,14 @@ const gcd = (x, y) => {
   return i;
 };
 
-// get rule
-const getRule = () => {
-  console.log('Find the greatest common divisor of given numbers.');
+// generate question and calc result
+const questionAndCalc = () => {
+  const x = randomNumbs(1, 100);
+  const y = randomNumbs(1, 100);
+  const questionString = `${x} ${y}`;
+  const result = gcd(x, y);
+  const resultString = `${questionString} result${result}`;
+  return String(resultString);
 };
 
-// generate question and get result
-const getQuestionAndCalc = () => {
-  const x = randomNumbs(101);
-  const y = randomNumbs(101);
-  console.log(`Question: ${x} ${y}`);
-  return gcd(x, y);
-};
-
-export { getRule, getQuestionAndCalc };
+export { rule, questionAndCalc };

@@ -1,27 +1,34 @@
-import { randomNumbs } from '../utils.js';
+import randomNumbs from '../utils.js';
+
+// rule
+const rule = () => {
+  const str = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  return str;
+};
 
 // check number is prime?
-const prime = (num) => {
-  let result = '';
-  for (let i = 3; i < num; i += 1) {
+const isPrime = (num) => {
+  let result = 'yes';
+  if (num < 2) {
+    result = 'no';
+    return result;
+  }
+  const numSqrt = Math.sqrt(num);
+  for (let i = 2; i <= numSqrt; i += 1) {
     if (num % i === 0) {
       result = 'no';
       break;
-    } else result = 'yes';
+    }
   }
   return result;
 };
 
-// get rule
-const getRule = () => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+// generate question and calc result
+const questionAndCalc = () => {
+  const questionString = randomNumbs(1, 100);
+  const result = isPrime(questionString);
+  const resultString = `${questionString} result${result}`;
+  return String(resultString);
 };
 
-// generate question and get result
-const getQuestionAndCalc = () => {
-  const num = randomNumbs(101);
-  console.log(`Question: ${num}`);
-  return prime(num);
-};
-
-export { getRule, getQuestionAndCalc };
+export { rule, questionAndCalc };

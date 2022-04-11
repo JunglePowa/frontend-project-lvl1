@@ -1,19 +1,22 @@
-import { randomNumbs } from '../utils.js';
+import randomNumbs from '../utils.js';
+
+// rule
+const rule = () => {
+  const str = 'Answer "yes" if the number is even, otherwise answer "no".';
+  return str;
+};
+
 // check number is even?
-const even = (number) => {
+const isEven = (number) => {
   const result = number % 2 === 0 ? 'yes' : 'no';
   return result;
 };
 
-// get rule
-const getRule = () => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-};
-
 // generate question and get result
-const getQuestionAndCalc = () => {
-  const number = randomNumbs(101);
-  console.log(`Question: ${number}`);
-  return even(number);
+const questionAndCalc = () => {
+  const questionString = randomNumbs(1, 100);
+  const result = isEven(questionString);
+  const resultString = `${questionString} result${result}`;
+  return String(resultString);
 };
-export { getRule, getQuestionAndCalc };
+export { rule, questionAndCalc };
