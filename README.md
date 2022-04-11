@@ -27,13 +27,13 @@ __________________________
 
 [![brain-gcd](https://asciinema.org/a/QBqEHNax3pAezFtlJsiwiMZFY.svg)](https://asciinema.org/a/QBqEHNax3pAezFtlJsiwiMZFY)
 
-#### Игра "Простое ли число?"
+#### Игра: "Простое ли число?"
 
 для запуска игры наберите brain-prime
 
 [![brain-prime](https://asciinema.org/a/VwnigZM8zFZscdIjXpNXvdkns.svg)](https://asciinema.org/a/VwnigZM8zFZscdIjXpNXvdkns)
 
-#### Игра "Арифметическая прогрессия"
+#### Игра: "Арифметическая прогрессия"
 
 для запуска игры наберите brain-progression
 
