@@ -1,17 +1,10 @@
-import randomNumbs from '../utils.js';
+import getRandomNum from '../utils.js';
 
-// print rule
-const rule = () => {
-  const str = 'What is the result of the expression?';
-  return str;
-};
-// generate question and calc result
-const questionAndCalc = () => {
-  const arr = ['+', '-', '*'];
-  const index = randomNumbs(0, arr.length);
-  const num1 = randomNumbs(1, 100);
-  const num2 = randomNumbs(1, 100);
-  const questionString = `${num1} ${arr[index]} ${num2}`;
+// round rule
+const rule = 'What is the result of the expression?';
+
+// calc right answer
+const calc = (arr, index, num1, num2) => {
   let result = '';
   switch (arr[index]) {
     case '-':
@@ -26,7 +19,20 @@ const questionAndCalc = () => {
     default:
       break;
   }
-  const resultString = `${questionString} result${result}`;
-  return String(resultString);
+  return result;
 };
-export { rule, questionAndCalc };
+
+// get round data
+const getRound = () => {
+  const roundArr = [];
+  const arr = ['+', '-', '*'];
+  const index = getRandomNum(0, arr.length);
+  const num1 = getRandomNum(1, 100);
+  const num2 = getRandomNum(1, 100);
+  const question = `${num1} ${arr[index]} ${num2}`;
+  const answer = String(calc(arr, index, num1, num2));
+  roundArr.push(question, answer);
+  return roundArr;
+};
+
+export { rule, getRound };

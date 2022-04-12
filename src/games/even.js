@@ -1,22 +1,20 @@
-import randomNumbs from '../utils.js';
+import getRandomNum from '../utils.js';
 
 // rule
-const rule = () => {
-  const str = 'Answer "yes" if the number is even, otherwise answer "no".';
-  return str;
-};
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 // check number is even?
 const isEven = (number) => {
-  const result = number % 2 === 0 ? 'yes' : 'no';
+  const result = number % 2 === 0;
   return result;
 };
 
-// generate question and get result
-const questionAndCalc = () => {
-  const questionString = randomNumbs(1, 100);
-  const result = isEven(questionString);
-  const resultString = `${questionString} result${result}`;
-  return String(resultString);
+// get round data
+const getRound = () => {
+  const roundArr = [];
+  const question = getRandomNum(1, 100);
+  const answer = isEven(question) ? 'yes' : 'no';
+  roundArr.push(question, answer);
+  return roundArr;
 };
-export { rule, questionAndCalc };
+export { rule, getRound };
