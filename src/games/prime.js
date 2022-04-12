@@ -5,7 +5,7 @@ const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 // check number is prime?
 const isPrime = (num) => {
-  let result;
+  let result = true;
   if (num < 2) {
     result = false;
     return result;
@@ -19,7 +19,7 @@ const isPrime = (num) => {
   }
   return result;
 };
-
+console.log(isPrime(97));
 // get round data
 const getRound = () => {
   const roundArr = [];
